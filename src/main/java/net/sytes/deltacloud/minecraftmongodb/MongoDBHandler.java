@@ -64,7 +64,7 @@ public class MongoDBHandler {
     public void updateOnlinePlayerCount(int update) {
         String currentOnlinePlayers = getFieldValue("onlinePlayers");
         String updatedOnlinePlayers = Integer.toString(Integer.parseInt(currentOnlinePlayers) + update);
-        collection.updateOne(Filters.eq("name", "TestServer"), Updates.set("onlinePlayers", updatedOnlinePlayers));
+        updateDB("onlinePlayers", updatedOnlinePlayers);
     }
 
     public String getDifficulty() {

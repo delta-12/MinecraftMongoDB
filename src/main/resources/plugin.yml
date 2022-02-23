@@ -1,7 +1,7 @@
 name: MinecraftMongoDB
 version: ${project.version}
 main: net.sytes.deltacloud.minecraftmongodb.MinecraftMongoDB
-api-version: 1.17
+api-version: 1.18
 load: POSTWORLD
 authors: [ delta12 ]
 description: Update MongoDB database with server and player stats
