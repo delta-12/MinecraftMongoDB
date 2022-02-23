@@ -17,3 +17,6 @@ database-name: exampleDB
 collection-name: example_minecraft_servers
 server-name: Example Minecraft Server
 ```
+
+Note: A document with a matching name must already exist in the specified collection in your MongoDB database.
+
