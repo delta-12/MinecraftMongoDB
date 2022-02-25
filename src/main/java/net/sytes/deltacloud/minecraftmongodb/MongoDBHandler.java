@@ -61,6 +61,9 @@ public class MongoDBHandler {
     public void setWorldSeed(String seed) {
         updateDB("seed", seed);
     }
+    public void setVersion(String version) {
+        updateDB("version", version);
+    }
     public void updateOnlinePlayerCount(int update) {
         String currentOnlinePlayers = getFieldValue("onlinePlayers");
         String updatedOnlinePlayers = Integer.toString(Integer.parseInt(currentOnlinePlayers) + update);

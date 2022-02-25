@@ -53,6 +53,9 @@ public final class MinecraftMongoDB extends JavaPlugin {
         mongoDBHandler.setWorldSeed(Long.toString(Objects.requireNonNull(getServer().getWorld("world")).getSeed()));
         setDifficulty(mongoDBHandler.getDifficulty());
         setGameMode(mongoDBHandler.getGameMode());
+        String version = getServer().getVersion();
+        version = version.substring(version.lastIndexOf(' ') + 1);
+        mongoDBHandler.setVersion(version.substring(0, version.length() - 1));
         mongoDBHandler.setStatusOnline();
         getServer().getPluginManager().registerEvents(new PlayerLoginListener(mongoDBHandler), this);
     }
